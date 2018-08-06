@@ -13,7 +13,7 @@
             <br />
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <asp:TextBox ID="txtboxPassword" runat="server" class="form-control" placeholder="Password"></asp:TextBox>
+                <asp:TextBox ID="txtboxPassword" runat="server" TextMode="Password" class="form-control" placeholder="Password"></asp:TextBox>
             </div>
             <div class="form-group">
                 <asp:Button ID="btnSubmit" runat="server" Text="Login" class="btn btn-primary btn-lg" OnClick="btnSubmit_Click" />

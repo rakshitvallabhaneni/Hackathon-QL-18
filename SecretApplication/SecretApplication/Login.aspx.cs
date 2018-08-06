@@ -20,6 +20,7 @@ namespace SecretApplication
             var Username = txtboxUsername.Text;
             var Password = txtboxPassword.Text;
 
+            Session["Username"] = Username;
             using (SqlConnection conn = new SqlConnection())
             {
                 conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=c:\\users\\rvallabhaneni\\source\\repos\\SecretApplication\\SecretApplication\\App_Data\\Database1.mdf;Integrated Security=True";
