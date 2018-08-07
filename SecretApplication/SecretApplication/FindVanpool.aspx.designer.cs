@@ -11,5 +11,23 @@ namespace SecretApplication {
     
     
     public partial class FindVanpool {
+        
+        /// <summary>
+        /// JS_Test_Long control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField JS_Test_Long;
+        
+        /// <summary>
+        /// JS_Test_Lat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField JS_Test_Lat;
     }
 }
