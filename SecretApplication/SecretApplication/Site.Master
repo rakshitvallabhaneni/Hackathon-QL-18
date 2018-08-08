@@ -2,6 +2,8 @@
 
 <!DOCTYPE html>
 
+
+
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
@@ -14,7 +16,11 @@
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <style>
+        #NAV{
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -39,7 +45,7 @@
         </asp:ScriptManager>
 
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="NAV">
                 <a class="navbar-brand" href="#">VRide</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

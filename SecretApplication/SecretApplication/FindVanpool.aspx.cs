@@ -11,17 +11,9 @@ namespace SecretApplication
     public partial class FindVanpool : Page
     {
         public List<Location> Points { get; set; }
-        public double Long { get; set; }
-        public double Lat { get; set; }
         public string JSON { get; set; }
         public void Page_Load(object sender, EventArgs e)
         {
-            Long = -83.1346;
-            Lat = 42.3314;
-
-            //Lat = 29.683528;
-            //Long = -95.396020;
-
             using (SqlConnection conn = new SqlConnection())
             {
                 conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=c:\\users\\rvallabhaneni\\source\\repos\\SecretApplication\\SecretApplication\\App_Data\\Database1.mdf;Integrated Security=True";
@@ -37,8 +29,8 @@ namespace SecretApplication
                         var tempLat = reader.GetDouble(1);
 
                         Location point = new Location();
-                        point.Latitude = tempLat;
-                        point.Longitude = tempLong;
+                        point.lat = tempLat;
+                        point.lng = tempLong;
                         Points.Add(point);
                     }
                 }
@@ -46,7 +38,7 @@ namespace SecretApplication
             System.Web.Script.Serialization.JavaScriptSerializer oSerializer =
             new System.Web.Script.Serialization.JavaScriptSerializer();
             JSON = oSerializer.Serialize(Points);
-            Response.Redirect("https://wwww.google.com?=" + JSON);
+            //Response.Redirect("https://wwww.google.com?=" + JSON);
         }
     }
 }
